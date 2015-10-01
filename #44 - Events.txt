@@ -1,0 +1,20 @@
+-------------------
+#44 - Events
+--------------------
+
+delegate void MyEventHandler(int x, int y);
+class MyClass
+{
+	public event MyEventHandler MyEvent;
+}
+myClass obj = new MyClass();
+
+// subscribe to this event
+
+obj.MyEvent += handlerFunction;
+void handlerFunction(int x, string y){...}
+
+
+// stop listening to event
+obj.MyEvent -= handlerFunction;
+

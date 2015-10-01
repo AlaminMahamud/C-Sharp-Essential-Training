@@ -1,0 +1,16 @@
+------------------
+#42 - C# Preprocessor Directives
+------------------
+
+Preprocessor directives give instructions to the compiler:
+
+#define -> define or undefine a symbol
+#undef  ->
+
+#if
+#else   -> use logic to see if a symbol is defined
+#elif
+#endif
+
+#region 
+#endregion -> used for documentation of code

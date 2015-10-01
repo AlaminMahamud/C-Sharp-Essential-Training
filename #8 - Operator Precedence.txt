@@ -1,0 +1,15 @@
+ 
+ =======================================
+ #8 - Operator Precedence
+ ========================================
+ 
+ 1. Multiplicative Operator  : * / %
+ 2. Additive Operator        : + -
+ 3. Comparison & Type Testing: <> <=>= is as
+ 4. Equality                 : == !=
+ 5. Conditional AND          : &&
+ 6. Conditional OR           : ||
+ 7. Ternary                  : ?:
+ 8. Assignment               : = *= /= += -= 
+ 
+ 

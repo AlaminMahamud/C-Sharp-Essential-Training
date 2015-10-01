@@ -1,0 +1,25 @@
+================================================
+#2 - Overview Of C# 
+================================================
+
+	##- C# is a programming language for Microsoft's.NET platforms
+	##- managed code environment - memory management is automatic
+	##- compiled language
+	##- OOP almost everything can be treated as an Object
+	##- no global Functions or vars everything is in classes
+	
+	##- C# serves as a foundation for working with many different 
+		Microsoft platform technologies.
+	
+	##- Common Language Runtime(CLR) -> Microsoft.NET Framework Libraries
+	-> C# || VB.NET || Python
+
+	##- Windows && Windows Phone && Silverlight && SharePoint && ASP.NET
+		&& XNA(Xbox)
+		
+	## 2001 - .NET 1.0 - Initial C# Release
+	## 2003 - .NET 1.1 - C# 1.2 released
+	## 2005 - .NET 2.0 - C# 2.0 - Generics || Anonymous Method || iterators || Nullable Types
+	## 2007 - .NET 3.0 - Object Initializers || Anonymous Types || Extension methods || Lambda Expressions
+	## 2009 - .NET 4.0 - C# 4.0 || Name and Dynamic Building || Named and Optional Arguments
+	

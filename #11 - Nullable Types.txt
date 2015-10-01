@@ -1,0 +1,11 @@
+==========================================
+#11 - NULLABLE Types
+==========================================
+			
+ Nullable Types can represent the full range of values of their normal underlying type, along with the additional value of null
+ 
+ bool b;   // can be true or false;
+ b = null  // error - can't set b to null
+ bool? b;  // can be true or null;
+ int?  i;  // can be an integer value or null
+ 

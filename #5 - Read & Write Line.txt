@@ -1,0 +1,15 @@
+ ==============================
+ #5 - Read & Write Line
+ ==============================
+ 
+ Console.WriteLine();
+ Console.ReadLine();
+ 
+ WriteLine() -> Print the Output and returns a Carriage Return
+ ReadLine()  -> Reads an String 
+
+Concatenating is not efficient ->
+Format(); is the best way to do
+int i=0;
+Console.Format("Number of Seconds {0}",i); 
+

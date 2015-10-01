@@ -1,0 +1,29 @@
+ 
+ =========================================
+ #9 - Constants and Enumerations
+ ========================================= 
+ 
+ const int FREEZING = 32;
+ const int LUKEWARM = 65;
+ const int HOT      = 105;
+ constr int BOILING = 212;
+ 
+ enum Temperatures :byte{
+	FREEZING = 32;
+	LUKEWARN = 65;
+	HOT      = 105;
+	BOILING  = 212;
+ }
+ By Default enum types are integer
+ and when you create an enum field without any value
+	it will be 0 automatically;
+ 
+ byte
+ sbyte
+ short
+ ushort
+ int 
+ uint
+ long
+ ulong
+ 

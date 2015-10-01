@@ -1,0 +1,196 @@
+----------------------------------------------------
+#15 - Scope
+----------------------------------------------------
+All variables have a scope - where they are "visible" and can be used
+
+int myFunction()
+{
+	int x=10;
+	x++; //ok
+	for(i=0; i<10; i++)
+	{
+		int y= x+20; // ok
+		// other code ....
+	}
+	x++; // ok
+	y+=20; //error -y is not available here
+}
+
+
+ --------------------------------------------------
+ #16 - Conversion
+ --------------------------------------------------
+
+ Converting one type of variable to another is called casting
+ 
+ int i = 10;
+ float f = 20.0fl
+ f=i;      // OK - implicit cast from int to float
+ i=f; 	   // Error - Explicit cast from float to int needed
+	       // because data might be lost
+ i=(int)f; // OK - now explicit cast from float to int
+ 
+ --------------------------------------------------------
+ # 17 - Object Oriented Concepts 
+ --------------------------------------------------------
+ Classes are one of the most common types in C# 
+ A Class Provides a blueprint or a description of what an object looks like
+	- What kind of data an object of this type holds
+	- What kind of things that an object of this type can do
+ A class is not, however, the actual object itself
+ Classes are used to create individual objects - called instances - sort of stamping machine that stamps out physical parts
+ 
+ 
+ --------------------------------------------------------
+ #18 - Defining A Class 
+ --------------------------------------------------------
+
+ class MyClass
+ {
+	//fields to contain the class data
+	
+	int    myInteger;
+	string myString;
+	
+	// methods that define the class functionality
+	public int myFunction()
+	{
+		// Whatever the logic is
+		return myInteger;
+	}
+	public MyClass(string defaultMessage)
+	{
+		myMessage = defaultMessage;
+	}
+	
+ }
+ 
+ 
+ In C# the new operator is used to create, or instantiate, an object
+ myClass myObj = new myClass("Hello"); // Calls Constructor
+ 
+ To Use the fields and methods of the class, use the "." operator
+ int myResult = myObj.AddNumbers(5,10); 
+ 
+ Static members don't require instantiation to use them
+ Console.WriteLine("some Text");
+ 
+ Instance Memebers get Copied each time a new object is created
+ Static Members belong to the entire class - there's only one of them
+ 
+ class Wine
+ {
+	int    Year;
+	string Name;
+	
+	static int bottleCount=0;
+	
+	public Wine(string s, int y)
+	{
+		Name = s;
+		Year = y;
+		bottleCount+=1;
+	}
+ }
+ 
+ -----------------------------------
+ #18 - Access Modifiers
+ -----------------------------------
+ `
+ By default data and methods defined in a class can only be used inside that class itself - you must choose to expose them
+ 
+ Access modifiers let you specifyhow programs (including yours) that use your classes  can access their data and methods
+ 
+ class myClassName
+ {
+	private   int    someInteger;
+	public    string myMessage;
+    protected void   myFunction();	
+ }
+ 
+ private   - class member can only be accessed within the class itself
+ public    - class member can be accessed by any other object
+ protected - class member can be accessed within this class or any subclass (class that inherits from this class)
+ internal  - class member can be accessed by any class in the same assembly (package of code like a library or other program);
+ 
+
+ ------------------------------------------------------
+ #19 - Defining Properties
+ ------------------------------------------------------
+ Properties are like data fields, but have logic behid them
+ From the outside, they look like any other member variable
+	But they act like a member functions
+ Defined like a field with "get" and "set" code added
+ Can use Access Modifiers just like Member Fields and Member Methods
+ 
+ class myExample
+ {
+	private int someVal; // private data field
+	
+	// Property
+	public int CurrentValue
+	{
+		get{return someValue;}
+		set{someVal = value; } //value is implicit
+	}
+	
+ }
+ 
+ 
+ myExample myEx = new myExample();
+ int i = myEx.CurrentValue; // triggers the get Logic
+ myEx.CurrentValue = 5; // that will trigger the set logic
+ 
+ Automatic Properties:
+ 
+ class myExample
+ {
+	private int someVal; // private int field
+	public int CurrentValue{
+		get{return someVal;}
+		set{someVal = value;} // Value is implicit
+	}
+ }
+ 
+ could be written as...
+ 
+ class myExample
+ {
+	public int CurrentValue{get; set;}
+ }
+ 
+ Read only and Write only Properties
+ 
+ class myExample
+ {
+	private int someVal; // private int field
+	public int CurrentValue{
+		get{return someVal;} // this is read-only as no set is there
+	}
+ }
+ 
+ class myExample
+ {
+	private int someVal; // private int field
+	public int CurrentValue{
+		set{someValue = value};
+	}
+ }
+ 
+ 
+ WHY USE PROPERTIES ? 
+ 
+ # Properties can be calculated on-the-fly
+ # Provide Complete Control over data field access
+	# Logic is hidden from the object's consumer
+ # Properties promote the idea of encapsulation
+ 
+ class Wine
+ {
+	private decimal WholeSalePrice;
+	private decimal retailMarkUp;
+	
+	public decimal Price{
+		get{return wholesalePrice * retailMarkup;}
+	}
+ }

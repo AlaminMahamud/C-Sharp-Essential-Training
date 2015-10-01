@@ -1,0 +1,125 @@
+ -----------------------
+ #25 - Hash Table 
+ -----------------------
+ 
+ 
+ -----------------------
+ #26 - Method Overloading 
+ -----------------------
+ 
+ class Wine{
+	public int year;
+	public string name;
+	public decimal price;
+	
+	public Wine(string s)
+	{
+		name = s;
+	}
+	
+	public Wine(string s, int y)
+	{
+		name = s;
+		year = y;
+	}
+ }
+ 
+ // same signature overloads the method
+ 
+ class Example
+ {
+	public int myFunction(int x)
+	{
+		......
+		return ..; 
+	}
+	public float myFunction(int x)
+	{
+		....
+		return ..;
+	}
+ 
+ }
+ 
+ // the above program won't work. cause the 
+ // method return type is not the part of a signature
+ 
+ ----------------------------------------
+ #27 - Overriding Methods
+ ----------------------------------------
+ 
+ Being able to change or augment the behaviour of methods in classes,
+ known as overriding their logic, is one of the most powerful aspects of OOP
+ 
+ virtual -> Tells the compiler that this method can be overriden by derived class
+	public virtual int functionName()
+	{
+	}
+ 
+ override -> In the subclass, tells the compiler that this method is overriding the same named method in the base class	
+  public override int functionName() 
+  {
+  }
+ base -> In the Subclass, calls the base class method	
+ if it doesn't call it completely creates a new function
+  base.myFunction();
+  
+  
+  -----------------------------------------------
+  #28 - Abstract Classes
+  -----------------------------------------------
+  
+  Abstract classes cannot be instantiated by themselves - you must create a subclass (derived class) and instantiate that instead
+  
+  Abstract classes have abstract members that derived classes must override in order to provide functionality
+  
+  public abstract class myClass
+  {
+	
+  }
+  
+  -----------------------------------------------
+  #29 - Sealed Classes
+  -----------------------------------------------
+  
+  -----------------------------------------------
+  #30 - Structs 
+  -----------------------------------------------
+  
+  structs are similar to classes, with some important differences;
+	- Structs don't support inheritence
+	- Structs are value type, while classes are referenced types
+	- you can't initialize the fields of a struct inside the definition
+	
+	Structs are usually small and simple
+	Structs can havge properties and methdos just like a class
+	
+	Data type for representing  a point on a 2D surface
+	
+	public class Point2D
+	{
+		public int xCoord;
+		public int yCoord;
+		public Point (int x, int y)
+		{
+			xCoord = x;
+			yCoord = y;
+		}
+	}
+	
+	public struct Point2D
+	{
+		public int xCoord;
+		public int yCoord;
+		
+		public Point(int x, int y)
+		{
+			xCoord = x;
+			yCoord = y;
+		}
+	
+	}
+	
+  
+  
+  

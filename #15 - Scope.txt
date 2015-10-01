@@ -1,0 +1,17 @@
+----------------------------------------------------
+#15 - Scope
+----------------------------------------------------
+All variables have a scope - where they are "visible" and can be used
+
+int myFunction()
+{
+	int x=10;
+	x++; //ok
+	for(i=0; i<10; i++)
+	{
+		int y= x+20; // ok
+		// other code ....
+	}
+	x++; // ok
+	y+=20; //error -y is not available here
+}

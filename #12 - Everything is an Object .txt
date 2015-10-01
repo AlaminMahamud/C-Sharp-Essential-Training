@@ -1,0 +1,38 @@
+ 
+ ==============================================
+ #12 - Everything is an Object 
+ ==============================================
+ 
+ System.Object
+
+ int i = 0;
+ int i = new int(); 
+ 
+ i.GetType(); // returns System.Int32
+ i.ToString(); // Returns a String
+ i.Equals(j); // Returns whether two objects are equal
+ 
+ is operator
+ 
+ int myFunction(object obj)
+ {
+	
+	if(obj is int)
+	{
+		int  i = (int)obj;
+		// operate on the integer
+	}
+	else if(obj is string)
+	{
+		string s = (string) obj;
+		// operate on the string
+	}
+ }
+ 
+ Provides a unified way of working with all variable types - you don
+'t need to treat primitive types one way and objects another like in other languages
+
+Basic Variable Types in C# have some cool automatic features built in 
+
+C# types can be converted to and from objects, so they can be passed to functions that takes object as parameters
+

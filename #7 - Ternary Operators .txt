@@ -1,0 +1,8 @@
+ =====================================
+ #7 - Ternary Operators 
+ =====================================
+ ?: Operators like a very compact if-else statement
+ (condition) ? true:false;
+ 
+ lowestPrice = (price1>price2)?price2:price1; 
+ 

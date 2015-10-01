@@ -1,0 +1,10 @@
+ --------------------------------------------------------
+ # 17 - Object Oriented Concepts 
+ --------------------------------------------------------
+ Classes are one of the most common types in C# 
+ A Class Provides a blueprint or a description of what an object looks like
+	- What kind of data an object of this type holds
+	- What kind of things that an object of this type can do
+ A class is not, however, the actual object itself
+ Classes are used to create individual objects - called instances - sort of stamping machine that stamps out physical parts
+ 

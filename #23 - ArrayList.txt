@@ -1,0 +1,62 @@
+
+ ---------------------------------------
+ #22 - ArrayList
+ ---------------------------------------
+ ArrayList are like arrays, but can be dynamically resized as needed
+ 
+ ArrayList myAl = new ArrayList();
+ ArrayList myAl = new ArrayList(capacity);
+ 
+ Adding / Removing
+ 
+ myAl.Add(object item);
+ myAl.Insert(int index, object item);
+ myAl.Remove(object item);
+ myAl.RemoveAt(int index);
+ myAl.Count;
+ 
+ Indexing
+ 
+ myAl[0]
+ myAl[0] = "hello";
+ 
+ ArrayList myAL = new ArrayList();
+ myAL.Add("item 1");
+ myAL.Add("item 2");
+ myAL.Add("item 3");
+ myAL.Add("item 4");
+
+for(int i=0; i<myAL.Count;i++)
+{
+	Console.WriteLine("{0}", myAL[i]);
+} 
+
+foreach(object obj in myAL )
+{
+	Console.WriteLine("{0}", obj);
+}
+
+ ArrayList and Mixed Content
+ 
+ ArrayList myAL = new ArrayList();
+ myAL.Add("one");
+ myAL.Add(2);
+ myAL.Add("two");
+ myAL.Add(3);
+ 
+ int result = 0;
+ foreach (object obj in myAL)
+ {
+	if(obj is int)
+		result += (int)obj;
+ }
+ 
+ foreach(object obj in myAL)
+ {
+	if(obj is int)
+	{
+		result+=(int)obj;
+	}
+	
+ }
+ 

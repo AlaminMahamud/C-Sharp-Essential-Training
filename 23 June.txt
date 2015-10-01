@@ -1,0 +1,130 @@
+-----------------------------
+#20 - Value and Reference
+-----------------------------
+Value Types
+	int 
+	long
+	float
+	decimal
+	short
+	byte
+	char
+	bool
+	struct
+	
+Reference Types
+	class
+	array
+	delegate
+	interface
+	
+
+ The Fundamental differencce between value types and reference types is how they are handled in memory
+
+ Value  int i=10;                 +-------+-------+
+ Types  int j=i;           		  +i      + 10    +
+								  +-------+-------+
+								  +j      + 10	  +
+								  +-------+-------+
+ Reference Types:
+
+ public class Point {public int X,Y;}
+ 
+ Point p1 = new Point();
+ P1.X = P1.Y = 10;
+ P2 = P1;
+ 
+ ---------------------------------------
+ #22 - ArrayList
+ ---------------------------------------
+ ArrayList are like arrays, but can be dynamically resized as needed
+ 
+ ArrayList myAl = new ArrayList();
+ ArrayList myAl = new ArrayList(capacity);
+ 
+ Adding / Removing
+ 
+ myAl.Add(object item);
+ myAl.Insert(int index, object item);
+ myAl.Remove(object item);
+ myAl.RemoveAt(int index);
+ myAl.Count;
+ 
+ Indexing
+ 
+ myAl[0]
+ myAl[0] = "hello";
+ 
+ ArrayList myAL = new ArrayList();
+ myAL.Add("item 1");
+ myAL.Add("item 2");
+ myAL.Add("item 3");
+ myAL.Add("item 4");
+
+for(int i=0; i<myAL.Count;i++)
+{
+	Console.WriteLine("{0}", myAL[i]);
+} 
+
+foreach(object obj in myAL )
+{
+	Console.WriteLine("{0}", obj);
+}
+
+ ArrayList and Mixed Content
+ 
+ ArrayList myAL = new ArrayList();
+ myAL.Add("one");
+ myAL.Add(2);
+ myAL.Add("two");
+ myAL.Add(3);
+ 
+ int result = 0;
+ foreach (object obj in myAL)
+ {
+	if(obj is int)
+		result += (int)obj;
+ }
+ 
+ foreach(object obj in myAL)
+ {
+	if(obj is int)
+	{
+		result+=(int)obj;
+	}
+	
+ }
+ 
+ ----------------------------
+ #23 - Stacks
+ ----------------------------
+ Stacks also maintain a list of items like arrays and ArrayList,
+ 
+ but it operates on a push-on, pop-off paradigm
+ 
+ Stack myStack = new Stack();
+ myStack.Push("string 1");
+ myStack.Push("string 2");
+ 
+ object o = myStack.Pop); // get tops value
+ object o = muStack.Peek(); // looks at top
+ 
+ int c = myStack.count;// gets the number of items in the stack
+ 
+ Stacks are LIFO - Last In Fast Out
+ 
+ -------------------------------------
+ #24 - QUEUES
+ -------------------------------------
+ 
+ Queues maintain a list of items like Stacks, but are FIFO - FIRST IN FIRST OUT, like a line of people waiting at a counter
+ 
+ Queue myQ = new Queue();
+ myQ.Enqueue("string 1");
+ myQ.Enqueue("string 2");
+ myQ.Enqueue("string 3");
+ 
+ object o = myQ.Dequeue(); // gets first item
+ object o = myQ.Peek();
+ int c = myQ.Count;
+ 

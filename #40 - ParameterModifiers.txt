@@ -1,0 +1,34 @@
+----------------------
+#40 - Parameter Modifiers
+--------------------
+
+
+
+static void Main(string[] args)
+{
+	int x;
+	changeFunction(x);
+}
+
+static void changeFunction(int number)
+{
+	number+=10;
+}
+
+
+to reference :->
+
+static void Main(string[] args)
+{
+	int x;
+	callByRef(ref x);
+	
+}
+
+static void callByRef(ref int params)
+{
+	params+=10;
+}
+
+// out allows you to return a value passed back by reference
+

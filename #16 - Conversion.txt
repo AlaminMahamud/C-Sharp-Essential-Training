@@ -1,0 +1,13 @@
+ --------------------------------------------------
+ #16 - Conversion
+ --------------------------------------------------
+
+ Converting one type of variable to another is called casting
+ 
+ int i = 10;
+ float f = 20.0fl
+ f=i;      // OK - implicit cast from int to float
+ i=f; 	   // Error - Explicit cast from float to int needed
+	       // because data might be lost
+ i=(int)f; // OK - now explicit cast from float to int
+ 

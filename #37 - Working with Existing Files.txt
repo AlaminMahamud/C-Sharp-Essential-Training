@@ -1,0 +1,13 @@
+  -----------------------
+ #37 - Working with Existing Files
+ -----------------------
+ 
+ The File class provides common features for working with files. Most of  the methods in this class are static - you call them on the File Object.
+
+ File.Exists - Checks to see if a file at a given path exists
+ File.Create - Creates a file in the specified path
+ File.Copy   - Creates a new file at a specified location
+ File.Move   - Moves a file into another location
+ File.Delete - Deletes the file to another location
+ 
+ 

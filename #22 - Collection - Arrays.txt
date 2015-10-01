@@ -1,0 +1,48 @@
+ 
+ ----------------------------------
+ #21 - Collection - Arrays
+ ----------------------------------
+ 
+ In C#, arrays hold a fixed number of elements all of the same type
+ 
+ int oneValue;
+ oneValue = 100;
+ 
+ int[] manyValues = new int[4];
+ manyValues[0] = 100;
+ 
+ 
+ int[] manyValues = {100, 200, 300, 400};
+ string[] myStrings = {"one", "two", "three", "four"};
+ 
+ C# automatically provides bounds checking for arrays
+ 
+ manyValues[100] = 500; // this will cause an error
+ 
+ Arrays are fixed in size - once you declare them, that's how big they are 
+ 
+ These allows them to be contiguous in memory, which is very efficient
+ 
+ Array elemetns are all of the same type
+ 
+ int[,] multiDimArray = new int[3,3]; 
+ multiDimArray[0,1] = 10;
+ 
+ int[,] mutiDimArray = new int[,] {
+						{0,1,2},
+						{4,5,6},
+						{7,8,9}
+					};
+ C# arrays are ofcourse objects
+ 
+ int[] manyValues = {10,200,300,400};
+
+ 
+ // many built in functions
+ manyValues.GetLength();        // returns 4
+ Array.Clear(manyValues, 0, 4); // starting at 0, clears 4 elements
+ Array.Sort(manyValues);        // sorts the given array
+ Array.Reverse(manyValues);     // reverse the given array
+ 
+ 
+ 

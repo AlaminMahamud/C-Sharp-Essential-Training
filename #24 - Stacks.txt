@@ -1,0 +1,17 @@
+ ----------------------------
+ #23 - Stacks
+ ----------------------------
+ Stacks also maintain a list of items like arrays and ArrayList,
+ 
+ but it operates on a push-on, pop-off paradigm
+ 
+ Stack myStack = new Stack();
+ myStack.Push("string 1");
+ myStack.Push("string 2");
+ 
+ object o = myStack.Pop); // get tops value
+ object o = muStack.Peek(); // looks at top
+ 
+ int c = myStack.count;// gets the number of items in the stack
+ 
+ Stacks are LIFO - Last In Fast Out

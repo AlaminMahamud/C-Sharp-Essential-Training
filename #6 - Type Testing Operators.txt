@@ -1,0 +1,16 @@
+
+====================================
+#6 - Type Testing Operators
+====================================
+
+is Operator -> returns true if a given object is a certain type
+as Operator -> converts a given object to another type (if possible)
+
+ void myFunction(Object obj){
+	if(obj is Employee){
+		Employee emp = obj as Employee; // null if can't be done;
+		string name = emp.FirstName;
+		...
+	}
+ }
+ 

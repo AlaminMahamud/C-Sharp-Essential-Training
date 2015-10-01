@@ -1,0 +1,39 @@
+ -----------------------
+ #36 - Intro to file and stream
+ -----------------------
+ 
+ When you want to move data into or out of a file, across the network. over the internet, etc. the data has to be  streamed
+ 
+ Stream Data
+ 
+ 100000000001110101010....  file + Network
+ 
+ Streams can be readable, writeable or both
+ 
+ Streams can also be seekable - in other words, some types of streams can support a current position that can be queried or modified
+ 
+ All streams descend from the System.IO.Stream abstract base class
+ 
+ Stream ->File Stream
+             ->Memory Stream
+			 ->Network Stream
+	
+ 
+ File and directory classes 
+ 
+ The System.IO.NameSpace provides File and Directory classes
+ 
+  Working with files 
+  ---------------------------
+  File -> provides simplified, high-level functions for working with files
+  FileInfo -> More Detailed , lower level file functions that give more control
+  FileStream -> Exposes a Stream Object around a file, with very detailed control
+  
+  Working With Directories
+  ------------------------------------
+  
+  Directory Provides simplified, high-level functions for working with folders
+  DirectoryInfo -> More Detailed, lower level folder functions that give more control
+  
+  
+  

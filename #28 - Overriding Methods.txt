@@ -1,0 +1,20 @@
+ ----------------------------------------
+ #26 - Overriding Methods
+ ----------------------------------------
+ 
+ Being able to change or augment the behaviour of methods in classes,
+ known as overriding their logic, is one of the most powerful aspects of OOP
+ 
+ virtual -> Tells the compiler that this method can be overriden by derived class
+	public virtual int functionName()
+	{
+	}
+ 
+ override -> In the subclass, tells the compiler that this method is overriding the same named method in the base class	
+  public override int functionName() 
+  {
+  }
+ base -> In the Subclass, calls the base class method	
+ if it doesn't call it completely creates a new function
+  base.myFunction();
+  

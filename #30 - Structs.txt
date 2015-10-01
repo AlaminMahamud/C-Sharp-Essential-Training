@@ -1,0 +1,38 @@
+  -----------------------------------------------
+  #30 - Structs 
+  -----------------------------------------------
+  
+  structs are similar to classes, with some important differences;
+	- Structs don't support inheritence
+	- Structs are value type, while classes are referenced types
+	- you can't initialize the fields of a struct inside the definition
+	
+	Structs are usually small and simple
+	Structs can havge properties and methdos just like a class
+	
+	Data type for representing  a point on a 2D surface
+	
+	public class Point2D
+	{
+		public int xCoord;
+		public int yCoord;
+		public Point (int x, int y)
+		{
+			xCoord = x;
+			yCoord = y;
+		}
+	}
+	
+	public struct Point2D
+	{
+		public int xCoord;
+		public int yCoord;
+		
+		public Point(int x, int y)
+		{
+			xCoord = x;
+			yCoord = y;
+		}
+	
+	}
+	

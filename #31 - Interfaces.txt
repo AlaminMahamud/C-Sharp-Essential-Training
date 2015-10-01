@@ -1,0 +1,71 @@
+--------------------------------
+#31 - Interfaces 
+--------------------------------
+
+interfaces provide a way of grouping a set of common behaviours in a single place where more than one class can use them
+
+An interface is like a class, but provides a specs rather than an implementation
+
+Classes can implement multiple interfaces
+
+Classes are things. Interfaces are behaviours.
+
+
+class A 
+{
+	public void SaveData(){...}
+}
+
+class B
+{
+	public void SaveData(){...}
+}
+
+class C
+{
+	public void SaveData(){...}
+}
+
+interface ISaveable
+{
+	void SaveData();
+}
+
+
+class A:ISaveable
+{
+	public void SaveData();
+}
+
+class B:ISaveable
+{
+	public void SaveData();
+}
+
+class C:ISaveable
+{
+	public void SaveData();
+}
+
+interface IShrinkable
+{
+	void ShrinkData();
+}
+
+class A:IShrinkable,ISaveData
+{
+	public void SaveData(){...}
+	public void ShrinkData(){...}
+}
+
+class B:IShrinkable,ISaveData
+{
+	public void SaveData(){....}
+	public void ShrinkData(){...}
+}
+
+class C:IShrinkable, ISaveData
+{
+	public void SaveData();
+	public void ShrinkData();
+}

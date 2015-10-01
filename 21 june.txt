@@ -1,0 +1,247 @@
+ ==============================
+ #5 - Read & Write Line
+ ==============================
+ 
+ Console.WriteLine();
+ Console.ReadLine();
+ 
+ WriteLine() -> Print the Output and returns a Carriage Return
+ ReadLine()  -> Reads an String 
+
+Concatenating is not efficient ->
+Format(); is the best way to do
+int i=0;
+Console.Format("Number of Seconds {0}",i); 
+
+
+====================================
+#6 - Type Testing Operators
+====================================
+
+is Operator -> returns true if a given object is a certain type
+as Operator -> converts a given object to another type (if possible)
+
+ void myFunction(Object obj){
+	if(obj is Employee){
+		Employee emp = obj as Employee; // null if can't be done;
+		string name = emp.FirstName;
+		...
+	}
+ }
+ 
+ =====================================
+ #7 - Ternary Operators 
+ =====================================
+ ?: Operators like a very compact if-else statement
+ (condition) ? true:false;
+ 
+ lowestPrice = (price1>price2)?price2:price1; 
+ 
+ =======================================
+ #8 - Operator Precedence
+ ========================================
+ 
+ 1. Multiplicative Operator  : * / %
+ 2. Additive Operator        : + -
+ 3. Comparison & Type Testing: <> <=>= is as
+ 4. Equality                 : == !=
+ 5. Conditional AND          : &&
+ 6. Conditional OR           : ||
+ 7. Ternary                  : ?:
+ 8. Assignment               : = *= /= += -= 
+ 
+ 
+ =========================================
+ #9 - Constants and Enumerations
+ ========================================= 
+ 
+ const int FREEZING = 32;
+ const int LUKEWARM = 65;
+ const int HOT      = 105;
+ constr int BOILING = 212;
+ 
+ enum Temperatures :byte{
+	FREEZING = 32;
+	LUKEWARN = 65;
+	HOT      = 105;
+	BOILING  = 212;
+ }
+ By Default enum types are integer
+ and when you create an enum field without any value
+	it will be 0 automatically;
+ 
+ byte
+ sbyte
+ short
+ ushort
+ int 
+ uint
+ long
+ ulong
+ 
+ 
+ =====================================
+ #10 - Functions And Methdos
+ =====================================
+ 
+ Functions : 
+			it provides a way to break up large sections of code into smaller, re-usable pieces that make the program easier to maintain and understand;
+			
+ To Create A Function :
+		
+	myFunction (int x, date d)
+	{
+		// Code of the Function goes here
+		Console.WriteLine("We're in a Function ! ");
+		return someValue;
+	}
+	
+	
+==========================================
+#11 - NULLABLE Types
+==========================================
+			
+ Nullable Types can represent the full range of values of their normal underlying type, along with the additional value of null
+ 
+ bool b;   // can be true or false;
+ b = null  // error - can't set b to null
+ bool? b;  // can be true or null;
+ int?  i;  // can be an integer value or null
+ 
+ 
+ ==============================================
+ #12 - Everything is an Object 
+ ==============================================
+ 
+ System.Object
+
+ int i = 0;
+ int i = new int(); 
+ 
+ i.GetType(); // returns System.Int32
+ i.ToString(); // Returns a String
+ i.Equals(j); // Returns whether two objects are equal
+ 
+ is operator
+ 
+ int myFunction(object obj)
+ {
+	
+	if(obj is int)
+	{
+		int  i = (int)obj;
+		// operate on the integer
+	}
+	else if(obj is string)
+	{
+		string s = (string) obj;
+		// operate on the string
+	}
+ }
+ 
+ Provides a unified way of working with all variable types - you don
+'t need to treat primitive types one way and objects another like in other languages
+
+Basic Variable Types in C#  have some cool automatic features built in 
+
+C# types can be converted to and from objects, so they can be passed to functions that takes object as parameters
+
+
+ -----------------------------------------------
+ #13 - Working with Integer numbers
+ -----------------------------------------------
+
+ +------------------+------------+---------------
+ | type             + size(bits) + range
+ | byte
+ | sbyte
+ | short
+ | ushort 
+ | int  
+ | uint  
+ | long
+ | ulong
+ +------------------+-------------+--------------+
+ 
+ --------------------------------------------------
+ #14 - Working With Floating Point Numbers
+ --------------------------------------------------
+ 
+ float number  = 123.45f; -> 7 digits of precision
+ double number = 123.45d; -> 15-16 digits of precision
+ decimal number= 123.45m; -> 28-29 digits of precision
+ 
+ *** Special Floating Point Numbers
+ 
+ NaN - Not A Number
+ PositiveInfinity - Infinity on greater than 0 side
+ NegativeInfinity - Infintiy on less than 0 side
+ 
+ float f;
+ if(f<float.PositiveInfinity){......
+ if(f==float.NaN){..................
+ if(float.IsPositiveInfinity(f)){... if(float.IsNaN(f)){................
+ 
+ ---------------------------------------------------
+ #15 - Working With Characters and Strings
+ ---------------------------------------------------
+ 
+ The char data type in C# Represents a single Unicode Characters
+ 
+ char myCar = 'a'; // one char is 16 bits, or 2 bytes
+			= '7';
+			= '?';
+
+ the String data type represents a series if unicode characters
+ 
+ string myMessage = "This is a smaple Message";
+ string myMessage = "This string has \n a newline in it";
+ string myMessage = "C:\\mydir\\somefile.txt";
+ string myMessage = @"C:\mydir\somefile.txt";
+ 
+ Character and Strings are objects 
+ char => System.char || string => System.string
+ 
+ char c='a';
+ char.IsUpper(c);
+ char.IsDigit(c);
+ char.IsLetter(c);
+ char.IsPunctuation(c);
+ char.ToUpper(c);
+ char.ToLower(c);
+ 
+ string s = "my Message";
+
+ s.ToUpper();
+ s.ToLower();
+ s.IndexOf();
+ s.LastIndexOf(s2);
+ s.LastIndexOf(s2);
+ s.Trim();
+ string.Format(s,arg1,argN); 
+ string.IsNullOrEmpty(s);
+ 
+ 
+ Strings are immutable - they cannot be changed once created
+ Operations that appear to change a string actually create a new string
+ 
+ This can cause a significant performance penalty
+ string result = "";
+ 
+ An Example to change the string 
+ 
+ string s = "";
+ for(int c=0; c<1000; c++)
+ {
+	resul+= "some other string"; 
+ }
+ 
+ // the above way is an inefficient way
+ 
+ StringBuilder sb = new StringBuilder();
+ for(int c=0; c<1000; c++)
+ {
+	sb.append("some other string");
+ }
+ result = sb.ToString();
+ 

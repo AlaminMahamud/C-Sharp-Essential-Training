@@ -1,0 +1,17 @@
+-------------------
+#43 - Delegates
+--------------------
+
+C# delegates decouple the caller and the called function 
+like callBacks
+
+delegate int DelegateName(int i, string s);
+
+DelegateName func = someFunction;
+
+int result = func(3,hello);
+
+int someFunction(int i, string s)
+{
+	...
+}

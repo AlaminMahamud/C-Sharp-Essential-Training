@@ -1,0 +1,16 @@
+-------------------
+#41 - Optional And named Params
+--------------------
+
+Optional Params
+------------------
+void nyFunction(int a=0, int b=1)
+myFunction() //
+myFunction(10) // a is 10, b defaults to 10
+
+Named Params
+--------------
+void myFunction(int a, int b)
+{
+	void myFunction(b:5,a:3)
+}

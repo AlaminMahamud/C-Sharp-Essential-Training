@@ -1,0 +1,29 @@
+=======================
+#26- Sealed Classes
+========================
+
+
+Sealed Classes are the opposite of abstract classes:
+	Abstract classes force   you to derive a subclass before use them
+	Sealed   Clasess prevent you to derive a subclass beofore use them
+
+Individual methods can also be marked as sealed, which prevents them form being
+overriden in subclasses
+
+
+ It is far more common to seal entire class than methods
+
+
+public sealed class myClass
+{
+	
+}
+
+public class mySubClass : myClass
+{
+	// Error in inheriting 
+	// cause the base class is sealed
+ ........................
+}
+
+

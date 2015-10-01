@@ -1,0 +1,14 @@
+=================================================
+#4 - Namespaces in C# 
+=================================================
+.NET uses namespaces to organize the classes that it provides.
+A namespace is just a collection of related classes (or other namespaces)
+
+	System - Namespace
+		# Console
+		# Environment
+		# Garbage Collector
+		# Math
+		# ....
+
+	

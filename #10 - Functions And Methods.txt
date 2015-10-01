@@ -1,0 +1,17 @@
+ =====================================
+ #10 - Functions And Methdos
+ =====================================
+ 
+ Functions : 
+			it provides a way to break up large sections of code into smaller, re-usable pieces that make the program easier to maintain and understand;
+			
+ To Create A Function :
+		
+	myFunction (int x, date d)
+	{
+		// Code of the Function goes here
+		Console.WriteLine("We're in a Function ! ");
+		return someValue;
+	}
+	
+	

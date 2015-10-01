@@ -1,0 +1,80 @@
+ ------------------------------------------------------
+ #19 - Defining Properties
+ ------------------------------------------------------
+ Properties are like data fields, but have logic behid them
+ From the outside, they look like any other member variable
+	But they act like a member functions
+ Defined like a field with "get" and "set" code added
+ Can use Access Modifiers just like Member Fields and Member Methods
+ 
+ class myExample
+ {
+	private int someVal; // private data field
+	
+	// Property
+	public int CurrentValue
+	{
+		get{return someValue;}
+		set{someVal = value; } //value is implicit
+	}
+	
+ }
+ 
+ 
+ myExample myEx = new myExample();
+ int i = myEx.CurrentValue; // triggers the get Logic
+ myEx.CurrentValue = 5; // that will trigger the set logic
+ 
+ Automatic Properties:
+ 
+ class myExample
+ {
+	private int someVal; // private int field
+	public int CurrentValue{
+		get{return someVal;}
+		set{someVal = value;} // Value is implicit
+	}
+ }
+ 
+ could be written as...
+ 
+ class myExample
+ {
+	public int CurrentValue{get; set;}
+ }
+ 
+ Read only and Write only Properties
+ 
+ class myExample
+ {
+	private int someVal; // private int field
+	public int CurrentValue{
+		get{return someVal;} // this is read-only as no set is there
+	}
+ }
+ 
+ class myExample
+ {
+	private int someVal; // private int field
+	public int CurrentValue{
+		set{someValue = value};
+	}
+ }
+ 
+ 
+ WHY USE PROPERTIES ? 
+ 
+ # Properties can be calculated on-the-fly
+ # Provide Complete Control over data field access
+	# Logic is hidden from the object's consumer
+ # Properties promote the idea of encapsulation
+ 
+ class Wine
+ {
+	private decimal WholeSalePrice;
+	private decimal retailMarkUp;
+	
+	public decimal Price{
+		get{return wholesalePrice * retailMarkup;}
+	}
+ }

@@ -1,0 +1,10 @@
+ -----------------------------------------
+ #34  - Custom Exceptions
+ ------------------------------------------
+
+ By Subclassing the System.Exception object, you can create your own 
+ 
+ To Raise an exception within your code, use the throw exception
+ 
+ throw new System.Exception();
+ throw new MyCustomException();

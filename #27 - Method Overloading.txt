@@ -1,0 +1,41 @@
+ -----------------------
+ #24 - Method Overloading 
+ -----------------------
+ 
+ class Wine{
+	public int year;
+	public string name;
+	public decimal price;
+	
+	public Wine(string s)
+	{
+		name = s;
+	}
+	
+	public Wine(string s, int y)
+	{
+		name = s;
+		year = y;
+	}
+ }
+ 
+ // same signature overloads the method
+ 
+ class Example
+ {
+	public int myFunction(int x)
+	{
+		......
+		return ..; 
+	}
+	public float myFunction(int x)
+	{
+		....
+		return ..;
+	}
+ 
+ }
+ 
+ // the above program won't work. cause the 
+ // method return type is not the part of a signature
+ 

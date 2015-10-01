@@ -1,0 +1,27 @@
+--------------------------------------
+#25 - Hash Tables 
+------------------------------------
+
+ Dictionaries are used to associate a particular key within 
+a given value
+ 
+
+ Think of them as lookup tables - you use a key to look up a value
+ 
+ Keys must be uniuqe - no duplicate key values are allowed
+ Dictionaries don;t have any sense of order
+
+
+ HashTable myHT = new HashTable();
+ myHt.Add("SEA", "Seattle Tacoma Airport");
+ myHT.Add("SFO", "San Francisco Airpoort");
+ myHT["IAD"] = "Washington Dallas Airport";
+
+ myHT.Remove("SFO");
+
+ int c = myHT}.Count;
+ bool b = myHT.ContainsKey("SFO");
+
+ bool b = myHT.ContainsKey("San Francisco Airport");
+
+

@@ -1,0 +1,52 @@
+
+ --------------------------------------------------------
+ #18 - Defining A Class 
+ --------------------------------------------------------
+
+ class MyClass
+ {
+	//fields to contain the class data
+	
+	int    myInteger;
+	string myString;
+	
+	// methods that define the class functionality
+	public int myFunction()
+	{
+		// Whatever the logic is
+		return myInteger;
+	}
+	public MyClass(string defaultMessage)
+	{
+		myMessage = defaultMessage;
+	}
+	
+ }
+ 
+ 
+ In C# the new operator is used to create, or instantiate, an object
+ myClass myObj = new myClass("Hello"); // Calls Constructor
+ 
+ To Use the fields and methods of the class, use the "." operator
+ int myResult = myObj.AddNumbers(5,10); 
+ 
+ Static members don't require instantiation to use them
+ Console.WriteLine("some Text");
+ 
+ Instance Memebers get Copied each time a new object is created
+ Static Members belong to the entire class - there's only one of them
+ 
+ class Wine
+ {
+	int    Year;
+	string Name;
+	
+	static int bottleCount=0;
+	
+	public Wine(string s, int y)
+	{
+		Name = s;
+		Year = y;
+		bottleCount+=1;
+	}
+ }

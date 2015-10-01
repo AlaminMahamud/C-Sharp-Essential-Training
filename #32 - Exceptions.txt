@@ -1,0 +1,44 @@
+---------------------------
+#32 - Exceptions 
+--------------------------
+
+An Exception is an error that happens during your program's execution
+
+int x = 10;
+int y = 5;
+
+int res = x/y;
+
+but if y = 0;
+res = x/y; 		// error divide by 0
+
+
+Exceptions are raised or thrown, when errors are encountered
+
+program flow interrupted. and control is transferred to the nearest exception handler - the handler catches the exception
+
+if the is no exception handler to process the exception then the exception is terminated with an error code
+
+Exceptions don't just come from .NET - you can built your own exception and raise them yourself with the throw instruction
+ 
+ 
+ Exception Keywords
+ 
+ int x = 10;
+ int y = 0;
+ int result;
+ 
+ try
+ {
+	// Code Attempts an operation
+	result = x/y;
+ }
+ catch
+ {
+	// exceptions are handled
+	Console.WriteLine("An Error happened");
+ }
+ finally
+ {
+	// this code is always executed
+ }

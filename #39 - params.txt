@@ -1,0 +1,16 @@
+-------------------
+#39 - Params
+--------------------
+Sometimes you want to be able to define a function that takes a variable number of argument parameters
+
+The params keyword makes this possible 
+
+int addNumbers( params int[] nums )
+{
+	int total = 0;
+	foreach(int x in nums)
+	{
+		total+=x;
+	}
+	return total;
+}

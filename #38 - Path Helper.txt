@@ -1,0 +1,8 @@
+-----------------------------
+#38 - Path Helper
+-----------------------------
+
+System.IO.Path Provides a collection of utilities for path operations
+A typical path has a predictable structure
+
+C:\Users\#null\Documents\somefile.txt

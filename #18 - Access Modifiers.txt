@@ -1,0 +1,23 @@
+ -----------------------------------
+ #18 - Access Modifiers
+ -----------------------------------
+ `
+ By default data and methods defined in a class can only be used inside that class itself - you must choose to expose them
+ 
+ Access modifiers let you specifyhow programs (including yours) that use your classes  can access their data and methods
+ 
+ class myClassName
+ {
+	private   int    someInteger;
+	public    string myMessage;
+    protected void   myFunction();	
+ }
+ 
+ private     - class member can only be accessed within the class itself
+ public      - class member can be accessed by any other object
+ protected - class member can be accessed within this class or any subclass (class that inherits from this class)
+ internal  - class member can be accessed by any class in the same assembly (package of code like a library or other program);
+ 
+
+ 
+ 

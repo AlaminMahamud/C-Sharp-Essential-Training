@@ -1,0 +1,21 @@
+ --------------------------------------------------
+ #14 - Working With Floating Point Numbers
+ --------------------------------------------------
+ 
+ float number  = 123.45f; -> 7 digits of precision
+ double number = 123.45d; -> 15-16 digits of precision
+ decimal number= 123.45m; -> 28-29 digits of precision
+ 
+ *** Special Floating Point Numbers
+ 
+ NaN - Not A Number
+ PositiveInfinity - Infinity on greater than 0 side
+ NegativeInfinity - Infintiy on less than 0 side
+ 
+ float f;
+ if(f<float.PositiveInfinity){......
+ if(f==float.NaN){..................
+ if(float.IsPositiveInfinity(f)){... if(float.IsNaN(f)){................
+ 
+ 
+ 

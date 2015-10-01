@@ -1,0 +1,25 @@
+ -------------------------
+ #33 - Exception Object
+ -------------------------
+
+ System.Exception is the base class for exception objects
+ 
+ Catching Specific Exception
+ -----------------------------------------
+ try{
+ 
+  }
+  catch(System.DivideByZeroException)
+  {
+  
+  }
+  catch(System.Arithmetic Exception)
+  {
+  
+  }
+  catch(System.OutOfMemoryException)
+  {
+  
+  }
+  
+  
